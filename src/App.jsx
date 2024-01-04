@@ -31,12 +31,13 @@ function App() {
   const copyPassword = useCallback(() => {
     window.navigator.clipboard.writeText(password);
     passwordRef.current?.select();
+    // console.log(passwordRef.current);
     // passwordRef.current?.setSelectionRange(0,1);
   }, [password]);
 
   return (
     <>
-      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-4 my-8 bg-[]">
+      <div className="w-full max-w-md mx-auto shadow-lg rounded-lg px-4 py-4 my-8 bg-[]">
         <h1 className="text-center text-xl my-3 font-bold">
           Password Genarator
         </h1>
